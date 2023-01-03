@@ -14,14 +14,6 @@ export default [
       },
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'esm' },
-    ],
-    plugins: [
-      del({ targets: ['build/*', 'playground/src/pull-to-refresh'] }),
-      typescript(),
-      postcss({
-        plugins: [],
-      }),
-    ],
-    external: Object.keys(pkg.peerDependencies || {}),
+Object.keys(pkg.peerDependencies || {}),
   },
 ];
